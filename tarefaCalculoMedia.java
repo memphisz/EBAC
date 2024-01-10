@@ -15,7 +15,17 @@ public class tarefaCalculoMedia {
         System.out.println("Digite a quarta nota: ");
         double nota4 = s.nextDouble();
         double soma = (nota1 + nota2 + nota3 + nota4) / 4;
-        System.out.println("A média do aluno é: " + soma);
+        String condMedia = getCond(soma);
+        System.out.println(condMedia);
+    }
+    public static String getCond(double soma) {
+        if (soma >= 7) {
+            return"Aprovado!";
+        } else if (soma >= 5) {
+            return"Aluno em recuperação!";
+        } else {
+            return"Aluno reprovado!";
+        }
     }
 }
 
